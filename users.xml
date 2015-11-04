@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Users>
+    <User email="liuloic@gmail.com">
+      <Password>Bonjour01</Password>
+      <isConnected>false</isConnected>
+      <isActive>true</isActive>
+    </User>
+  </Users>
+</UserCollection>

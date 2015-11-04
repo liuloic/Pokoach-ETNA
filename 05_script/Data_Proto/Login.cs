@@ -56,13 +56,24 @@ public class Login : MonoBehaviour {
 
 		if (Helper.IsEmail (Email)) {
 			UserContainer users = UserContainer.Load();
-			if (users.Users.Exists(x => x.Email == Email && x.Password == Password)) {
-				Debug.Log("True");
-				isLogged = true;
-			}
+			if (users.Users.Exists(x => x.Email == Email && x.Password == Password && x.isActive)) {
+				Debug.Log("Connected");
+
+                foreach(User userToReset in users.Users)
+                {
+                    userToReset.isConnected = false;
+                }
+
+                User crtUser = users.GetUser(Email);
+                crtUser.isConnected = true;
+
+                users.Save();
+
+                isLogged = true;
+            }
 		    else {
 				isLogged = false;
-				Debug.Log("False");
+				Debug.Log("Error");
 			}
 		}
 	}

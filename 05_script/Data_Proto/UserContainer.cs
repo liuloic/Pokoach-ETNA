@@ -59,7 +59,7 @@ public class UserContainer
 
 	public User GetUser(string email)
 	{
-		return Load().Users.Find(x => x.Email == email);
+		return this.Users.Find(x => x.Email == email);
 	}
 
 	public void DeleteUser(string email)
@@ -83,6 +83,6 @@ public class UserContainer
 
     public User GetCurrentUser()
     {
-        return Load().Users.Find(x => x.isConnected == true);
+        return this.Users.Find(x => x.isConnected == true);
     }
 }

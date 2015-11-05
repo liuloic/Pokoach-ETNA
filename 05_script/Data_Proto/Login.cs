@@ -14,9 +14,13 @@ public class Login : MonoBehaviour {
 	public GameObject panelRegister;
 	public bool isLogged = false;
 
-	void Start() {
-
-	}
+    void Start() {
+        UserContainer users = UserContainer.Load();
+        if (users.Users.Exists(x => x.isConnected))
+        {
+            isLogged = true;
+        }
+    }
 
 	void Update(){
 		if (isLogged){
@@ -61,11 +65,11 @@ public class Login : MonoBehaviour {
 
                 foreach(User userToReset in users.Users)
                 {
-                    userToReset.isConnected = false;
+                    if (userToReset.Email == Email)
+                        userToReset.isConnected = true;
+                    else
+                        userToReset.isConnected = false;
                 }
-
-                User crtUser = users.GetUser(Email);
-                crtUser.isConnected = true;
 
                 users.Save();
 

@@ -27,7 +27,14 @@ public class ScreenManager : MonoBehaviour {
 
 	void Start (){
 		_currentScreen = screens[0];
-	}
+        UserContainer users = UserContainer.Load();
+        if (!users.Users.Exists(x => x.isConnected))
+        {
+            InstanScene callScene = GameObject.Find("système").GetComponent<InstanScene>();
+            callScene.GoToLogin();
+        }
+            
+    }
 
 	void Update () {
 		StayState (_state);
@@ -99,4 +106,12 @@ public class ScreenManager : MonoBehaviour {
 
 		Debug.Log ("ChangeScreen");
 	}
+    
+    public void LogOff()
+    {
+        UserContainer users = UserContainer.Load();
+        users.GetCurrentUser().isConnected = false;
+
+        users.Save();
+    }
 }

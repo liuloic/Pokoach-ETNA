@@ -20,7 +20,12 @@ public class InstanScene : MonoBehaviour {
 		Application.LoadLevel("interface");
 	}
 
-	public void GoToProgramme()
+    public void GoToLogin()
+    {
+        Application.LoadLevel("Login");
+    }
+
+    public void GoToProgramme()
 	{
 		Application.LoadLevel("programme");
 	}

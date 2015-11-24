@@ -19,5 +19,7 @@ public class User
     {
         isConnected = false;
         isActive = true;
+        LastName = "";
+        FirstName = "";
     }
 }

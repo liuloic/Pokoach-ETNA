@@ -34,9 +34,14 @@ public class InstanScene : MonoBehaviour {
 		Application.LoadLevel("selectEx");
 	}
 
-// Programmes
+    public void GoToProfil()
+    {
+        Application.LoadLevel("Profil");
+    }
 
-	public void GoToTestMax(){
+    // Programmes
+
+    public void GoToTestMax(){
 		Application.LoadLevel("test_max");
 	}
 

@@ -3,7 +3,16 @@
   <Users>
     <User email="liuloic@gmail.com">
       <Password>Bonjour01</Password>
+      <LastName />
+      <FirstName />
       <isConnected>false</isConnected>
+      <isActive>true</isActive>
+    </User>
+    <User email="Test@test.test">
+      <Password>Bonjour01</Password>
+      <LastName>,nb,nb,bn</LastName>
+      <FirstName>liliulilkj</FirstName>
+      <isConnected>true</isConnected>
       <isActive>true</isActive>
     </User>
   </Users>

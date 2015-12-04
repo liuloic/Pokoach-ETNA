@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExerciceCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Exercices>
+    <Exercice name="dévélopper coucher">
+      <Order>0</Order>
+      <serie restTime="90" infoTime="8" order="0" />
+      <serie restTime="90" infoTime="10" order="1" />
+      <serie restTime="120" infoTime="12" order="2" />
+    </Exercice>
+    <Exercice name="développer coucher">
+      <Order>0</Order>
+      <serie restTime="90" infoTime="8" order="0" />
+      <serie restTime="90" infoTime="10" order="1" />
+      <serie restTime="120" infoTime="12" order="2" />
+    </Exercice>
+    <Exercice name="développer coucher">
+      <Order>0</Order>
+      <serie restTime="90" infoTime="8" order="0" />
+      <serie restTime="90" infoTime="10" order="1" />
+      <serie restTime="120" infoTime="12" order="2" />
+    </Exercice>
+    <Exercice name="développer coucher">
+      <Order>0</Order>
+      <serie restTime="90" infoTime="8" order="0" />
+      <serie restTime="90" infoTime="10" order="1" />
+      <serie restTime="120" infoTime="12" order="2" />
+    </Exercice>
+    <Exercice name="développer coucher">
+      <Order>0</Order>
+      <serie restTime="90" infoTime="8" order="0" />
+      <serie restTime="90" infoTime="10" order="1" />
+      <serie restTime="120" infoTime="12" order="2" />
+    </Exercice>
+    <Exercice name="développer coucher">
+      <Order>0</Order>
+      <serie restTime="90" infoTime="8" order="0" />
+      <serie restTime="90" infoTime="10" order="1" />
+      <serie restTime="120" infoTime="12" order="2" />
+    </Exercice>
+    <Exercice name="développer coucher">
+      <Order>0</Order>
+      <serie restTime="90" infoTime="8" order="0" />
+      <serie restTime="90" infoTime="10" order="1" />
+      <serie restTime="120" infoTime="12" order="2" />
+    </Exercice>
+    <Exercice name="développer coucher">
+      <Order>0</Order>
+      <serie restTime="90" infoTime="8" order="0" />
+      <serie restTime="90" infoTime="10" order="1" />
+      <serie restTime="120" infoTime="12" order="2" />
+    </Exercice>
+    <Exercice name="développer coucher">
+      <Order>0</Order>
+      <serie restTime="90" infoTime="8" order="0" />
+      <serie restTime="90" infoTime="10" order="1" />
+      <serie restTime="120" infoTime="12" order="2" />
+    </Exercice>
+    <Exercice name="développer coucher">
+      <Order>0</Order>
+      <serie restTime="90" infoTime="8" order="0" />
+      <serie restTime="90" infoTime="10" order="1" />
+      <serie restTime="120" infoTime="12" order="2" />
+    </Exercice>
+    <Exercice name="développer coucher">
+      <Order>0</Order>
+      <serie restTime="90" infoTime="8" order="0" />
+      <serie restTime="90" infoTime="10" order="1" />
+      <serie restTime="120" infoTime="12" order="2" />
+    </Exercice>
+  </Exercices>
+</ExerciceCollection>

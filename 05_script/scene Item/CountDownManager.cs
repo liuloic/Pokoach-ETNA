@@ -3,8 +3,6 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
 
-// a ne plus utiliser 
-
 public class CountDownManager : TextManager {
 
 	public float time;

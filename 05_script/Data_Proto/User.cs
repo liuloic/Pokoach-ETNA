@@ -9,17 +9,4 @@ public class User
 	public string Password { get; set; }
 	public string LastName { get; set; }
 	public string FirstName { get; set; }
-
-    //Check si l'utilisateur est connecté ou pas
-    public bool isConnected { get; set; }
-    // Si ce booléen est false, l'utilisateur est désactivé
-    public bool isActive { get; set; }
-
-    public User()
-    {
-        isConnected = false;
-        isActive = true;
-        LastName = "";
-        FirstName = "";
-    }
 }

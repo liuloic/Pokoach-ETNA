@@ -3,30 +3,28 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
 using UnityEngine;
-using System.Text;
 
 [XmlRoot("UserCollection")]
 public class UserContainer
 {
 	[XmlArray("Users"),XmlArrayItem("User")]
 	public List<User> Users = new List<User>();
-    
-    public void Save()
-    {
-        var serializer = new XmlSerializer(typeof(UserContainer));
-        //using(var stream = new FileStream(Path.Combine(Application.dataPath, "exercices.xml"), FileMode.OpenOrCreate))
-        using (StreamWriter sw = new StreamWriter(Path.Combine(Application.dataPath, "users.xml"), false, Encoding.GetEncoding("UTF-8")))
-        {
-            //stream.Seek(0, SeekOrigin.Begin);
-            serializer.Serialize(sw, this);
-        }
-    }
 
-    public static UserContainer Load()
+	public void Save()
 	{
-        string path = Path.Combine (Application.dataPath, "users.xml");
+		var serializer = new XmlSerializer(typeof(UserContainer));
+		using(var stream = new FileStream(Path.Combine(Application.dataPath, "users.xml"), FileMode.OpenOrCreate))
+		{
+			stream.Seek(0, SeekOrigin.Begin);
+			serializer.Serialize(stream, this);
+		}
+	}
+	
+	public static UserContainer Load()
+	{
+		string path = Path.Combine (Application.dataPath, "users.xml");
 
-		if (!(new FileInfo(path).Exists))
+		if (new FileInfo(path).Length == 0)
 			return new UserContainer();
 
 		var serializer = new XmlSerializer(typeof(UserContainer));
@@ -59,7 +57,7 @@ public class UserContainer
 
 	public User GetUser(string email)
 	{
-		return this.Users.Find(x => x.Email == email);
+		return Load().Users.Find(x => x.Email == email);
 	}
 
 	public void DeleteUser(string email)
@@ -80,9 +78,4 @@ public class UserContainer
 
 		userContainer.Save();
 	}
-
-    public User GetCurrentUser()
-    {
-        return this.Users.Find(x => x.isConnected == true);
-    }
 }

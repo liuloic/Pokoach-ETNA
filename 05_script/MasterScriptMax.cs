@@ -17,7 +17,7 @@ public class MasterScriptMax : MonoBehaviour {
 
 
 
-	public Instanciate call;
+	public instanciate call;
 	
 	public bool endEg;
 

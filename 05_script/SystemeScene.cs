@@ -20,7 +20,7 @@ public class SystemeScene : MonoBehaviour {
 		SetNbEx ();
 		InstanciateWorkOut("exercice" + nbEx);
 	}
-
+	
 	// Update is called once per frame
 	void Update () {
 		exRunning = GameObject.Find ("exercice" + nbEx);

@@ -1,19 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="us-ascii"?>
 <UserCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Users>
-    <User email="liuloic@gmail.com">
-      <Password>Bonjour01</Password>
-      <LastName />
-      <FirstName />
-      <isConnected>false</isConnected>
-      <isActive>true</isActive>
+    <User email="lol@gmail.com">
+      <Password>lol</Password>
     </User>
-    <User email="Test@test.test">
-      <Password>Bonjour01</Password>
-      <LastName>,nb,nb,bn</LastName>
-      <FirstName>liliulilkj</FirstName>
-      <isConnected>true</isConnected>
-      <isActive>true</isActive>
+    <User email="toto@gmail.com">
+      <Password>haha</Password>
     </User>
   </Users>
 </UserCollection>

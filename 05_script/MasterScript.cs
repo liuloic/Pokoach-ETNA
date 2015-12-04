@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class MasterScript : MonoBehaviour {
 
-	public Instanciate call;
+	public instanciate call;
 
 	public bool endEg;
 
@@ -77,14 +77,14 @@ public class MasterScript : MonoBehaviour {
 		} else if (nb == 4) {
 			position.Add (new Vector2(-60, 140));
 			position.Add (new Vector2(60, 140));
-			position.Add (new Vector2(-60, 30));
-			position.Add (new Vector2(60, 30));
+			position.Add (new Vector2(-60, 100));
+			position.Add (new Vector2(60, 100));
 		} else if (nb == 5) {
 			position.Add (new Vector2(-120, 140));
 			position.Add (new Vector2(0, 140));
 			position.Add (new Vector2(120, 140));
-			position.Add (new Vector2(-60, 30));
-			position.Add (new Vector2(60, 30));
+			position.Add (new Vector2(-60, 100));
+			position.Add (new Vector2(60, 100));
 		}
 	}
 
@@ -96,28 +96,18 @@ public class MasterScript : MonoBehaviour {
 				if (serieRunning = serieEnCour.GetComponentInChildren<uiTextManager> ()) {
 					if (serieRunning.done) {
 						serieRunning.running = false;
-						serieEnCour.SetActive(false);
-						call.InstanceAndRest ("Rest", rest [nbSerieEnCour - 1], new Vector2 (0, -250));
+						call.InstanceAndRest ("Rest", rest [nbSerieEnCour - 1], new Vector2 (0, 0));
 						nbSerieEnCour += 1;
 					} else {
 						serieRunning.running = true;
 					}
 				}
-			} 
-		}
-		else
-		{
-			serieEnCour = GameObject.Find("endExe");
-			GameObject[] sprites = GameObject.FindGameObjectsWithTag("sprite");
-			
-			foreach (GameObject sprite in sprites)
-			{
-				sprite.SetActive(false);
+			} else {
+				serieEnCour = GameObject.Find ("endExe");
+				endEg = true;
 			}
-			endEg = true;
 		}
 	}
-
 
 	public void DestroyExercice(){
 		Destroy (nameEx);

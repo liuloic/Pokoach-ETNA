@@ -14,13 +14,18 @@ public class Login : MonoBehaviour {
 	public GameObject panelRegister;
 	public bool isLogged = false;
 
-    void Start() {
-        UserContainer users = UserContainer.Load();
-        if (users.Users.Exists(x => x.isConnected))
-        {
-            isLogged = true;
-        }
-    }
+	public enum screen{
+		login,
+		register,
+		main,
+		exercice
+	}
+
+	public screen currentScreen;
+	
+	void Start() {
+
+	}
 
 	void Update(){
 		if (isLogged){
@@ -60,24 +65,13 @@ public class Login : MonoBehaviour {
 
 		if (Helper.IsEmail (Email)) {
 			UserContainer users = UserContainer.Load();
-			if (users.Users.Exists(x => x.Email == Email && x.Password == Password && x.isActive)) {
-				Debug.Log("Connected");
-
-                foreach(User userToReset in users.Users)
-                {
-                    if (userToReset.Email == Email)
-                        userToReset.isConnected = true;
-                    else
-                        userToReset.isConnected = false;
-                }
-
-                users.Save();
-
-                isLogged = true;
-            }
+			if (users.Users.Exists(x => x.Email == Email && x.Password == Password)) {
+				Debug.Log("True");
+				isLogged = true;
+			}
 		    else {
 				isLogged = false;
-				Debug.Log("Error");
+				Debug.Log("False");
 			}
 		}
 	}
